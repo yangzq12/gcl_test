@@ -1,0 +1,17 @@
+contract Debugger {
+    @address int32 balance;
+    @address string denom;
+    @address function greet(int32 ba, string de) export{
+        __debug.print("in greet");
+        balance = ba;
+        denom = de;
+        foo("Alice");
+    }
+    @address function foo(string name){
+        __debug.print("foo, name: ", name);
+        bar(123);
+    }
+    @address function bar(int32 age){
+        __debug.print("bar, age: ", age);
+    }
+}
