@@ -1,0 +1,15 @@
+random.reseed
+allocate.address 1024
+chain.gaslimit 256
+
+chain.deploy @1 debugger.gcl
+
+Debugger.greet @0 {"ba":200, "de":"USD"}
+
+stopwatch.restart
+chain.run
+stopwatch.report
+
+chain.info
+
+viz.profiling
