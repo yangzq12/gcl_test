@@ -1,6 +1,5 @@
 contract Ballot {
 
-
     struct Proposal {
         string name;
         uint64 totalVotedWeight;
